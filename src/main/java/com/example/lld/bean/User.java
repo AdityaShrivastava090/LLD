@@ -15,15 +15,15 @@ public class User {
     @Autowired
     Order onlineorder;
 
-    public User(Order offorder, Order onorder){
+    public User(Order offorder, Order onorder) {
 
         this.offlineorder = offorder;
         this.onlineorder = onorder;
 
         System.out.println("user from constructor : " + this.hashCode());
 
-        System.out.println("offline order from User: "+ offlineorder.hashCode());
-        System.out.println("online order from User: "+ onlineorder.hashCode());
+        System.out.println("offline order from User: " + offlineorder.hashCode());
+        System.out.println("online order from User: " + onlineorder.hashCode());
     }
 
 }
