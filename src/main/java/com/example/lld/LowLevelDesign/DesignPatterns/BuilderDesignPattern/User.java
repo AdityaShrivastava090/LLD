@@ -16,28 +16,34 @@ public class User {
         this.phoneNumber = userBuilder.phoneNumber;
     }
 
+    // Step 2:  static builder class
     public static class UserBuilder {
         private String name;
         private int age;
         private String gender;
         private String phoneNumber;
 
+        //Required parameters in builder class constructor
         public UserBuilder(String name, int age) {
             this.name = name;
             this.age = age;
         }
 
+        // chaining methods
         public UserBuilder gender(String gender) {
             this.gender = gender;
             return this;
         }
 
+        //chaining methods
         public UserBuilder phoneNumber(String phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }
 
+        // write all the builder methods fro all optional fields;
         public User build() {
+            // also handle validation on each field
             return new User(this);
         }
     }
